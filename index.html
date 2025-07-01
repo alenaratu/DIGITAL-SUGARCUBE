@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Sugarcube Wall</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>🍬 Digital Sugarcube Wall 🍬</h1>
+  <p>Click a pocket and enter the password to reveal the message!</p>
+
+  <div class="board">
+    <!-- 8 Pockets -->
+    <div class="pocket" onclick="openPocket(0)">📩 Kak ren</div>
+    <div class="pocket" onclick="openPocket(1)">📩 Kak muti</div>
+    <div class="pocket" onclick="openPocket(2)">📩 Kak yuan</div>
+    <div class="pocket" onclick="openPocket(3)">📩 Kak eve</div>
+    <div class="pocket" onclick="openPocket(4)">📩 Kak zaidan</div>
+    <div class="pocket" onclick="openPocket(5)">📩 Kak pasha</div>
+    <div class="pocket" onclick="openPocket(6)">📩 Kak liam</div>
+    <div class="pocket" onclick="openPocket(7)">📩 Kak</div>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Hebrew:wght@100..800&display=swap" rel="stylesheet">
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <p>Enter password to open this sugarcube:</p>
+       <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Hebrew:wght@100..800&display=swap" rel="stylesheet">
+      <input type="password" id="passwordInput" placeholder="Enter password" />
+      <button onclick="checkPassword()">Unlock</button>
+      <p id="messageOutput"></p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- Sound -->
+  <audio id="paperSound" src="page-turn-305789.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
